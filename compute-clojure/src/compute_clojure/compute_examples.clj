@@ -21,7 +21,6 @@
     [clojure.java.io])
   (:import
     [org.jclouds.domain LoginCredentials]
-    [org.jclouds.scriptbuilder InitBuilder]
     [org.jclouds.compute.options TemplateOptions$Builder]
     [org.jclouds.scriptbuilder.domain Statement Statements]
     [org.jclouds.scriptbuilder.statements.login AdminAccess]))
