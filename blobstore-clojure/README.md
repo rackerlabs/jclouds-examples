@@ -10,6 +10,10 @@ Ensure you have [Leiningen](http://github.com/technomancy/leiningen) installed, 
 
     $ lein repl
     user=> (use 'create-list.containers)
+    user=> (create-and-list "provider" "identity" "credential" "container")
+    
+## create-and-list Examples
+
     user=> (create-and-list "cloudfiles-us" "RACKSPACE_USERNAME" "RACKSPACE_API_KEY" "mycontainer")
     user=> (create-and-list "aws-s3" "AWS_ACCESS_KEY" "AWS_SECRET_ACCESS_KEY" "mybucket")
 
