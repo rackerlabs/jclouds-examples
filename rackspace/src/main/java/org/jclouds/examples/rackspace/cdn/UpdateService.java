@@ -21,25 +21,13 @@ import static org.jclouds.examples.rackspace.autoscale.Constants.PROVIDER;
 
 import java.io.Closeable;
 import java.io.IOException;
-import java.net.URI;
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 
 import org.jclouds.ContextBuilder;
 import org.jclouds.openstack.poppy.v1.PoppyApi;
-import org.jclouds.openstack.poppy.v1.domain.Caching;
-import org.jclouds.openstack.poppy.v1.domain.Domain;
-import org.jclouds.openstack.poppy.v1.domain.Origin;
-import org.jclouds.openstack.poppy.v1.domain.Restriction;
-import org.jclouds.openstack.poppy.v1.domain.RestrictionRule;
 import org.jclouds.openstack.poppy.v1.domain.Service;
-import org.jclouds.openstack.poppy.v1.domain.ServiceStatus;
-import org.jclouds.openstack.poppy.v1.features.FlavorApi;
 import org.jclouds.openstack.poppy.v1.features.ServiceApi;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.io.Closeables;
-import com.google.common.util.concurrent.Uninterruptibles;
 
 /**
  * Updates a Poppy service. (Rackspace CDN).

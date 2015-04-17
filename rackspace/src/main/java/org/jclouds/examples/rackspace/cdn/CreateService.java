@@ -16,18 +16,12 @@
  */
 
 package org.jclouds.examples.rackspace.cdn;
-
-import static org.jclouds.examples.rackspace.autoscale.Constants.NAME;
-import static org.jclouds.examples.rackspace.autoscale.Constants.PROVIDER;
-import static org.jclouds.examples.rackspace.autoscale.Constants.PUBLIC_NET;
-import static org.jclouds.examples.rackspace.autoscale.Constants.SERVICE_NET;
+import static org.jclouds.examples.rackspace.cdn.Constants.PROVIDER;
 
 import java.io.Closeable;
 import java.io.IOException;
 import java.net.URI;
-import java.util.List;
 import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 
 import org.jclouds.ContextBuilder;
 import org.jclouds.openstack.poppy.v1.PoppyApi;
@@ -36,26 +30,11 @@ import org.jclouds.openstack.poppy.v1.domain.Domain;
 import org.jclouds.openstack.poppy.v1.domain.Origin;
 import org.jclouds.openstack.poppy.v1.domain.Restriction;
 import org.jclouds.openstack.poppy.v1.domain.RestrictionRule;
-import org.jclouds.openstack.poppy.v1.domain.Service;
-import org.jclouds.openstack.poppy.v1.domain.ServiceStatus;
-import org.jclouds.openstack.poppy.v1.domain.UpdateService;
 import org.jclouds.openstack.poppy.v1.features.FlavorApi;
 import org.jclouds.openstack.poppy.v1.features.ServiceApi;
-import org.jclouds.rackspace.autoscale.v1.domain.CreateScalingPolicy;
-import org.jclouds.rackspace.autoscale.v1.domain.CreateScalingPolicy.ScalingPolicyTargetType;
-import org.jclouds.rackspace.autoscale.v1.domain.CreateScalingPolicy.ScalingPolicyType;
-import org.jclouds.rackspace.autoscale.v1.domain.Group;
-import org.jclouds.rackspace.autoscale.v1.domain.GroupConfiguration;
-import org.jclouds.rackspace.autoscale.v1.domain.LaunchConfiguration;
-import org.jclouds.rackspace.autoscale.v1.domain.LaunchConfiguration.LaunchConfigurationType;
-import org.jclouds.rackspace.autoscale.v1.domain.LoadBalancer;
-import org.jclouds.rackspace.autoscale.v1.domain.Personality;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Lists;
 import com.google.common.io.Closeables;
-import com.google.common.util.concurrent.Uninterruptibles;
 
 /**
  * Demonstrates how to create a Poppy service on Rackspace (Rackspace CDN).
