@@ -125,7 +125,7 @@
     </dependency>
     <dependency>
       <groupId>org.apache.jclouds.labs</groupId>
-      <artifactId>rackspace-cdn-uk</artifactId>
+      <artifactId>rackspace-cdn-us</artifactId>
       <version>${jclouds.version}</version>
     </dependency>
     <!-- 3rd party dependencies -->
